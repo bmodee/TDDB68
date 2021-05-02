@@ -1,0 +1,28 @@
+q0:
+a) kommunikation mellan användarprogram och kärnan
+b) på grund av säkerheten
+
+q1:
+a) genom att kolla vilket interrupt ID man fick
+b) på användarstacken, genom att använda pekare kan man få tillgång till argumenten
+
+q2:
+a) användarstacken och kärn-stacken ligger i det virtuella minnet
+b) kärnan får en pekare från användarprogrammet till början av dess stack
+c) säkerhet
+
+q3:
+a) användarstacken
+b) pekare till första bokstaven och strängens längd
+
+q4:
+För att man skall hålla reda på vilka systemanrop som görs för att hantera dem i tur och ordning.
+Det finns ingenting som håller koll på om en fil bearbetas, och då kan man inte säga vad resultatet blir om t.ex. två trådar försöker skriva till samma fil samtidigt.
+
+q5:
+För att man inte ska kunna läsa och skriva till en fil samtidigt. Om en fil är stängd så vet OS-et att det går att utföra operationer på den.
+Om den är öppen så håller en operation på att utföras, och man måste då vänta tills den är stängd.
+
+q6:
+Vi genererar fil-identifierare genom att iterera över de redan använda fil-identifierarna, som finns i en array i vår thread, tills vi hittar en som inte är mappad till en öppen fil.
+När vi har hittat en tom plats, så mappar vi en fil-identifierare till den filen. FD är samma som indexet i arrayen.

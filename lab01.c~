@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main(int argc, char ** argv)
+{
+  char str[] = "sihtgubed";  //creates an array
+  char *stri = &str[8];      //points to the 8th element 
+  char buf[9];               //array with length 9
+  char *bufi, *bufend;       //something...
+  bufi = buf;                //sets buf to the beginning
+  bufend = &buf[9];          //something...
+
+  //reverse the string
+  while (bufi != bufend){
+    *bufi = *stri;
+    bufi++;
+    stri--;
+  }
+  //makes the string to uppercase letters
+  while (bufi != buf){
+    (*bufi) -= 32;
+    bufi--;
+  }
+  (*bufi) -= 32;
+
+  //prints the string
+  while (bufi != bufend){
+    printf("%c", *bufi);
+    bufi++;
+  }
+  return 0;
+}

@@ -1,0 +1,11 @@
+1: Busywaiting är att en process väntar på ett input (ex tangentbord). Detta ska undvikas eftersom
+en process måste vänta på en process som körs "för evigt"
+
+2: Yield lämnar företräde till en annan thread.
+  Sleep ger ifrån sin processor under ett bestämmt tidsintervall.
+
+3: Lock är bara en thread åt gången
+  semaphores tillåter ett bestämmt antal threads att köras (som lock fast för fler threads))
+  deadlock, inget körs, threads väntar på varandra
+
+4: undvika deadlocks. Genom att bryta ett av de fyra coffman kriterierna
